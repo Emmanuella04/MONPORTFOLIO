@@ -557,9 +557,9 @@ textarea.form-control {
 }
 
 .form-status {
-    margin-top: calc(var(--spacing) * 2);
-    padding: calc(var(--spacing) * 1.5);
-    border-radius: var(--border-radius);
+    margin-top: 16px;
+    padding: 12px;
+    border-radius: 8px;
     display: none;
 }
 
