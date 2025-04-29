@@ -556,6 +556,24 @@ textarea.form-control {
     resize: vertical;
 }
 
+.form-status {
+    margin-top: calc(var(--spacing) * 2);
+    padding: calc(var(--spacing) * 1.5);
+    border-radius: var(--border-radius);
+    display: none;
+}
+
+.form-status .sending {
+    color: #2196F3;
+}
+
+.form-status .success {
+    color: #4CAF50;
+}
+
+.form-status .error {
+    color: #F44336;
+}
 /* Footer */
 footer {
     background-color: var(--primary);
