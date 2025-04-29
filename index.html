@@ -43,9 +43,10 @@
 
     <!-- Hero Section -->
     <section id="home" class="hero section">
+        <div class="particles" id="particles"></div>
         <div class="container">
             <div class="hero-content">
-                <h1 class="hero-title fade-in">Bonjour, je suis <span style="color: var(--accent);">Emmanuella Kouamé</span></h1>
+                <h1 class="hero-title fade-in">Bonjour, je suis <span>Emmanuella Kouamé</span></h1>
                 <p class="hero-subtitle fade-in delay-1">Développeur Web Junior & Data Analyst</p>
                 <div class="hero-buttons fade-in delay-2">
                     <a href="#projects" class="btn">Voir mes projets</a>
@@ -54,7 +55,6 @@
             </div>
         </div>
     </section>
-
     <!-- About Section -->
     <section id="about" class="about section">
         <div class="container">
@@ -68,7 +68,7 @@
                     <p>
                        Aussi mon parcours m'a permis de travailler sur divers projets, d'exploration de données, aux tableaux de bord, en passant par des modèles de machine learning. Je suis constamment en train d'apprendre de nouvelles technologies pour rester à jour dans ce domaine en constante évolution.
                     </p>
-                    <a href="./Emmanuella KOUAME_CV.pdf" download class="btn">Télécharger mon CV</a>
+                    <a href="./EMMANUELLA Kouamé CV.pdf" download class="btn">Télécharger mon CV</a>
                 </div>
                 <div class="about-image">
                     <img src="images/test.png" alt="Ma photo">
@@ -259,6 +259,7 @@
                         </div>
                     </div>
                 </div>
+                
             </div>
         </div>
     </section>
@@ -299,32 +300,33 @@
                         </a>
                     </div>
                 </div>
-               <div class="contact-form">
-    <form id="contactForm" action="https://formspree.io/f/xnndjpvd" method="POST">
-        <div class="form-group">
-            <label for="name" class="form-label">Nom</label>
-            <input type="text" id="name" name="name" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="email" class="form-label">Email</label>
-            <input type="email" id="email" name="_replyto" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="subject" class="form-label">Sujet</label>
-            <input type="text" id="subject" name="_subject" class="form-control" required>
-        </div>
-        <div class="form-group">
-            <label for="message" class="form-label">Message</label>
-            <textarea id="message" name="message" class="form-control" required></textarea>
-        </div>
-        <!-- Champ caché pour éviter les spams -->
-        <input type="text" name="_gotcha" style="display:none">
-        <!-- URL de redirection après soumission -->
-        <input type="hidden" name="_next" value="https://votre-site.com/merci.html">
-        <button type="submit" class="btn">Envoyer le message</button>
-        <div id="form-status" class="form-status"></div>
-    </form>
-</div>
+                <div class="contact-form">
+                    <form id="contactForm" onsubmit="sendEmail(event)">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Nom</label>
+                            <input type="text" id="name" name="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Sujet</label>
+                            <input type="text" id="subject" name="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="btn">Envoyer le message</button>
+                    </form>
+                </div>
+                <div class="contact-direct">
+                    <h3>Contactez-moi directement</h3>
+                    <p>Vous pouvez m'envoyer un email à l'adresse suivante :</p>
+                    <p class="email-address">mahanemma89@gmail.com</p>
+                    <a href="mailto:mahanemma89@gmail.com" class="btn">Ouvrir mon client email</a>
+                </div>
         </div>
     </section>
 
@@ -441,7 +443,7 @@ document.addEventListener('DOMContentLoaded', function() {
             rect.bottom >= 0
         );
     }
-
+    
     function animateOnScroll() {
         // Animer les barres de progression des compétences
         skillCards.forEach(card => {
@@ -474,7 +476,28 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-
+// Fonction pour envoyer un email via mailto
+function sendEmail(event) {
+    event.preventDefault();
+    
+    // Récupérer les valeurs du formulaire
+    //const name = document.getElementById('name').value;
+    //const email = document.getElementById('email').value;
+    //const subject = document.getElementById('subject').value;
+    //const message = document.getElementById('message').value;
+    
+    // Construire le corps du message avec formatage
+    //const body = `Nom: ${name}\n\nEmail: ${email}\n\nMessage:\n${message}`;
+    
+    // Construire l'URL mailto
+    //const mailtoUrl = `mailto:emmanuella.kouame@epitech.eu?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    // Demander confirmation
+   // if (confirm("Votre client de messagerie va s'ouvrir pour envoyer cet email. Voulez-vous continuer?")) {
+        // Ouvrir le client de messagerie
+        window.location.href = mailtoUrl;
+   // }
+}
     const form = document.getElementById('contactForm');
 const formStatus = document.getElementById('form-status');
 

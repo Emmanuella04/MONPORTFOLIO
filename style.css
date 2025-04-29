@@ -574,6 +574,45 @@ textarea.form-control {
 .form-status .error {
     color: #F44336;
 }
+/* Styles pour la section de contact direct */
+.contact-direct {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background-color: var(--light-bg);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.contact-direct h3 {
+    margin-bottom: 1rem;
+    color: var(--primary);
+    font-size: 1.3rem;
+}
+
+.email-address {
+    font-weight: 600;
+    color: var(--accent);
+    margin: 1rem 0;
+    font-size: 1.1rem;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: calc(var(--spacing) * 6);
+}
+
+@media (min-width: 992px) {
+    .contact-container {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .contact-direct {
+        grid-column: 1 / -1;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
 /* Footer */
 footer {
     background-color: var(--primary);
