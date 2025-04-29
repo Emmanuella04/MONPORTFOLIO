@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Moderne</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
 </head>
 <body>
     <!-- Header -->
@@ -19,8 +20,24 @@
                     <li><a href="#projects">Projets</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
-                <button class="mobile-menu-btn">☰</button>
+                <button class="mobile-menu-btn" aria-label="Menu">☰</button>
             </nav>
+        </div>
+        <!-- Menu mobile overlay -->
+        <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+            <div class="mobile-menu">
+                <div class="mobile-menu-header">
+                    <div class="logo">MonPortfolio</div>
+                    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Fermer">✕</button>
+                </div>
+                <ul class="mobile-nav-links">
+                    <li><a href="#home">Accueil</a></li>
+                    <li><a href="#about">À propos</a></li>
+                    <li><a href="#skills">Compétences</a></li>
+                    <li><a href="#projects">Projets</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
     </header>
 
@@ -30,7 +47,7 @@
             <div class="hero-content">
                 <h1 class="hero-title fade-in">Bonjour, je suis <span style="color: var(--accent);">Emmanuella Kouamé</span></h1>
                 <p class="hero-subtitle fade-in delay-1">Développeur Web Junior & Data Analyst</p>
-                <div class="fade-in delay-2">
+                <div class="hero-buttons fade-in delay-2">
                     <a href="#projects" class="btn">Voir mes projets</a>
                     <a href="#contact" class="btn btn-outline">Me contacter</a>
                 </div>
@@ -49,7 +66,7 @@
                         Je suis une passionnée de l'informatique en générale. En 2024 je fais mes premiers pas pratiques dans le domaine du Développement web et de la Data/IA. j'ai appris à travailler sur des projets concrêts dans la création d'applications web modernes et responsives. J'aime résoudre des problèmes complexes et transformer des idées en produits numériques élégants.
                     </p>
                     <p>
-                       Aussi mon parcours m'a permis de travailler sur divers projets , d'exploration de données, aux tableaux de bord, en passant par des modèles de machine learning. Je suis constamment en train d'apprendre de nouvelles technologies pour rester à jour dans ce domaine en constante évolution.
+                       Aussi mon parcours m'a permis de travailler sur divers projets, d'exploration de données, aux tableaux de bord, en passant par des modèles de machine learning. Je suis constamment en train d'apprendre de nouvelles technologies pour rester à jour dans ce domaine en constante évolution.
                     </p>
                     <a href="./EMMANUELLA KOUAME CV.pdf" download class="btn">Télécharger mon CV</a>
                 </div>
@@ -67,7 +84,7 @@
             <div class="skills-category">
                 <h3 class="category-title">Compétences en Développement</h3>
                 <div class="skills-container">
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up">
                         <div class="skill-icon">💻</div>
                         <h3 class="skill-title">Développement Frontend</h3>
                         <p class="skill-description">HTML5, CSS3, JavaScript, Vue.js, Responsive Design</p>
@@ -77,25 +94,25 @@
                                 <span class="skill-level-percent">95%</span>
                             </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress" style="width: 95%;"></div>
+                                <div class="skill-progress" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="skill-icon">🛠️</div>
                         <h3 class="skill-title">Développement Backend</h3>
-                        <p class="skill-description"> PHP, MySQL</p>
+                        <p class="skill-description">PHP, MySQL</p>
                         <div class="skill-level">
                             <div class="skill-level-text">
                                 <span class="skill-level-name">Intermédiaire</span>
                                 <span class="skill-level-percent">55%</span>
                             </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress" style="width: 85%;"></div>
+                                <div class="skill-progress" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="skill-icon">🎨</div>
                         <h3 class="skill-title">Design UI/UX</h3>
                         <p class="skill-description">Figma</p>
@@ -105,7 +122,7 @@
                                 <span class="skill-level-percent">55%</span>
                             </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress" style="width: 75%;"></div>
+                                <div class="skill-progress" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
@@ -115,7 +132,7 @@
             <div class="skills-category">
                 <h3 class="category-title">Compétences en Data</h3>
                 <div class="skills-container">
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up">
                         <div class="skill-icon">📊</div>
                         <h3 class="skill-title">Analyse de Données</h3>
                         <p class="skill-description">Python, Pandas, NumPy, Jupyter, Tableau, Power BI</p>
@@ -125,11 +142,11 @@
                                 <span class="skill-level-percent">90%</span>
                             </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
+                                <div class="skill-progress" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="100">
                         <div class="skill-icon">🧠</div>
                         <h3 class="skill-title">Machine Learning</h3>
                         <p class="skill-description">Scikit-learn, TensorFlow, Keras, Modèles prédictifs</p>
@@ -139,11 +156,11 @@
                                 <span class="skill-level-percent">75%</span>
                             </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
+                                <div class="skill-progress" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="200">
                         <div class="skill-icon">📈</div>
                         <h3 class="skill-title">Big Data</h3>
                         <p class="skill-description">ETL, Data Warehousing, Streamlit, Dataiku</p>
@@ -153,11 +170,11 @@
                                 <span class="skill-level-percent">65%</span>
                             </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress" style="width: 65%;"></div>
+                                <div class="skill-progress" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
-                    <div class="skill-card">
+                    <div class="skill-card" data-aos="fade-up" data-aos-delay="300">
                         <div class="skill-icon">🔍</div>
                         <h3 class="skill-title">Data Engineering</h3>
                         <p class="skill-description">Pipelines de données, Kafka, Bases de données postgresql</p>
@@ -167,7 +184,7 @@
                                 <span class="skill-level-percent">50%</span>
                             </div>
                             <div class="skill-progress-bar">
-                                <div class="skill-progress" style="width: 50%;"></div>
+                                <div class="skill-progress" style="width: 0%;"></div>
                             </div>
                         </div>
                     </div>
@@ -181,7 +198,7 @@
         <div class="container">
             <h2 class="section-title">Mes projets</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up">
                     <div class="project-image">
                         <img src="images/work3.jpg" alt="Projet 1">
                     </div>
@@ -201,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-image">
                         <img src="images/power.png" alt="Projet 2">
                     </div>
@@ -221,7 +238,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="project-card">
+                <div class="project-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-image">
                         <img src="images/work6.jpg" alt="Projet 3">
                     </div>
@@ -232,10 +249,9 @@
                             <span class="project-tag">Dataiku</span>
                             <span class="project-tag">Streamlit</span>
                             <span class="project-tag">Scikit-learn</span>
-
                         </div>
                         <p class="project-description">
-                            Une application  pour prédire la pathologie du cancer de seins chez les femmes.
+                            Une application pour prédire la pathologie du cancer de seins chez les femmes.
                         </p>
                         <div class="project-links">
                             <a href="#" class="project-link">Voir le projet</a>
@@ -271,15 +287,15 @@
                             <span>Abidjan, Côte D'Ivoire</span>
                         </li>
                     </ul>
-                    <div class="social-links text-white" >
-                        <a href="https://www.facebook.com/" class="social-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 16.9913 5.65783 21.1283 10.4385 21.8785V14.8906H7.89941V12H10.4385V9.79688C10.4385 7.29063 11.9314 5.90625 14.2156 5.90625C15.3097 5.90625 16.4541 6.10156 16.4541 6.10156V8.5625H15.1931C13.9509 8.5625 13.5635 9.33334 13.5635 10.1242V12H16.3369L15.8936 14.8906H13.5635V21.8785C18.3441 21.1283 22.001 16.9913 22.001 12C22.001 6.47715 17.5238 2 12.001 2Z"></path></svg>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/" class="social-link" aria-label="Facebook">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.001 2C6.47813 2 2.00098 6.47715 2.00098 12C2.00098 16.9913 5.65783 21.1283 10.4385 21.8785V14.8906H7.89941V12H10.4385V9.79688C10.4385 7.29063 11.9314 5.90625 14.2156 5.90625C15.3097 5.90625 16.4541 6.10156 16.4541 6.10156V8.5625H15.1931C13.9509 8.5625 13.5635 9.33334 13.5635 10.1242V12H16.3369L15.8936 14.8906H13.5635V21.8785C18.3441 21.1283 22.001 16.9913 22.001 12C22.001 6.47715 17.5238 2 12.001 2Z"></path></svg>
                         </a>
-                        <a href="#" class="social-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
+                        <a href="#" class="social-link" aria-label="Github">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M12.001 2C6.47598 2 2.00098 6.475 2.00098 12C2.00098 16.425 4.86348 20.1625 8.83848 21.4875C9.33848 21.575 9.52598 21.275 9.52598 21.0125C9.52598 20.775 9.51348 19.9875 9.51348 19.15C7.00098 19.6125 6.35098 18.5375 6.15098 17.975C6.03848 17.6875 5.55098 16.8 5.12598 16.5625C4.77598 16.375 4.27598 15.9125 5.11348 15.9C5.90098 15.8875 6.46348 16.625 6.65098 16.925C7.55098 18.4375 8.98848 18.0125 9.56348 17.75C9.65098 17.1 9.91348 16.6625 10.201 16.4125C7.97598 16.1625 5.65098 15.3 5.65098 11.475C5.65098 10.3875 6.03848 9.4875 6.67598 8.7875C6.57598 8.5375 6.22598 7.5125 6.77598 6.1375C6.77598 6.1375 7.61348 5.875 9.52598 7.1625C10.326 6.9375 11.176 6.825 12.026 6.825C12.876 6.825 13.726 6.9375 14.526 7.1625C16.4385 5.8625 17.276 6.1375 17.276 6.1375C17.826 7.5125 17.476 8.5375 17.376 8.7875C18.0135 9.4875 18.401 10.375 18.401 11.475C18.401 15.3125 16.0635 16.1625 13.8385 16.4125C14.201 16.725 14.5135 17.325 14.5135 18.2625C14.5135 19.6 14.501 20.675 14.501 21.0125C14.501 21.275 14.6885 21.5875 15.1885 21.4875C19.259 20.1133 21.9999 16.2963 22.001 12C22.001 6.475 17.526 2 12.001 2Z"></path></svg>
                         </a>
-                        <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=gr%C3%A2ce-emmanuella-kouam%C3%A9-774621360" class="social-link">
-                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32" fill="currentColor"><path d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"></path></svg>
+                        <a href="https://linkedin.com/comm/mynetwork/discovery-see-all?usecase=PEOPLE_FOLLOWS&followMember=gr%C3%A2ce-emmanuella-kouam%C3%A9-774621360" class="social-link" aria-label="LinkedIn">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor"><path d="M18.3362 18.339H15.6707V14.1622C15.6707 13.1662 15.6505 11.8845 14.2817 11.8845C12.892 11.8845 12.6797 12.9683 12.6797 14.0887V18.339H10.0142V9.75H12.5747V10.9207H12.6092C12.967 10.2457 13.837 9.53325 15.1367 9.53325C17.8375 9.53325 18.337 11.3108 18.337 13.6245V18.339H18.3362ZM7.00373 8.57475C6.14573 8.57475 5.45648 7.88025 5.45648 7.026C5.45648 6.1725 6.14648 5.47875 7.00373 5.47875C7.85873 5.47875 8.55173 6.1725 8.55173 7.026C8.55173 7.88025 7.85798 8.57475 7.00373 8.57475ZM8.34023 18.339H5.66723V9.75H8.34023V18.339ZM19.6697 3H4.32923C3.59498 3 3.00098 3.5805 3.00098 4.29675V19.7033C3.00098 20.4202 3.59498 21 4.32923 21H19.6675C20.401 21 21.001 20.4202 21.001 19.7033V4.29675C21.001 3.5805 20.401 3 19.6675 3H19.6697Z"></path></svg>
                         </a>
                     </div>
                 </div>
@@ -330,83 +346,130 @@
         </div>
     </footer>
 
+    <!-- <script src="script.js"></script> -->
+</body>
+</html>
+
     <script>
-        // Header scroll effect
-        const header = document.getElementById('header');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
+       // Attendre que le DOM soit chargé
+document.addEventListener('DOMContentLoaded', function() {
+    // Éléments du DOM
+    const header = document.getElementById('header');
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuOverlay = document.getElementById('mobile-menu-overlay');
+    const mobileMenuClose = document.getElementById('mobile-menu-close');
+    const contactForm = document.getElementById('contactForm');
+    const skillProgressBars = document.querySelectorAll('.skill-progress');
+    const skillCards = document.querySelectorAll('.skill-card');
+    const projectCards = document.querySelectorAll('.project-card');
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        const navLinks = document.querySelector('.nav-links');
+    // Effet de défilement pour le header
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
         
-        mobileMenuBtn.addEventListener('click', () => {
-            navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
-        });
+        // Animer les compétences lorsqu'elles sont visibles
+        animateOnScroll();
+    });
 
-        // Form submission
-        const contactForm = document.getElementById('contactForm');
+    // Menu mobile
+    mobileMenuBtn.addEventListener('click', () => {
+        mobileMenuOverlay.style.display = 'block';
+        setTimeout(() => {
+            mobileMenuOverlay.classList.add('active');
+        }, 10);
+    });
+
+    mobileMenuClose.addEventListener('click', () => {
+        mobileMenuOverlay.classList.remove('active');
+        setTimeout(() => {
+            mobileMenuOverlay.style.display = 'none';
+        }, 300);
+    });
+
+    // Fermer le menu mobile lors du clic sur un lien
+    document.querySelectorAll('.mobile-nav-links a').forEach(link => {
+        link.addEventListener('click', () => {
+            mobileMenuOverlay.classList.remove('active');
+            setTimeout(() => {
+                mobileMenuOverlay.style.display = 'none';
+            }, 300);
+        });
+    });
+
+    // Soumission du formulaire
+    if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            // Ici, vous ajouteriez normalement le code pour envoyer le formulaire
             alert('Merci pour votre message ! Je vous répondrai dès que possible.');
             contactForm.reset();
         });
+    }
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
+    // Défilement fluide pour les liens d'ancrage
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                const headerHeight = header.offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset;
                 
-                const targetId = this.getAttribute('href');
-                const targetElement = document.querySelector(targetId);
-                
-                if (targetElement) {
-                    window.scrollTo({
-                        top: targetElement.offsetTop - 80,
-                        behavior: 'smooth'
-                    });
-                    
-                    // Close mobile menu if open
-                    if (window.innerWidth < 768) {
-                        navLinks.style.display = 'none';
-                    }
-                }
-            });
+                window.scrollTo({
+                    top: targetPosition - headerHeight,
+                    behavior: 'smooth'
+                });
+            }
         });
+    });
 
-        // Animation des barres de progression au défilement
-        const skillSections = document.querySelectorAll('.skills-category');
-        const animateSkills = () => {
-            skillSections.forEach(section => {
-                const sectionTop = section.getBoundingClientRect().top;
-                const windowHeight = window.innerHeight;
+    // Animation au défilement
+    function isElementInViewport(el) {
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.8 &&
+            rect.bottom >= 0
+        );
+    }
+
+    function animateOnScroll() {
+        // Animer les barres de progression des compétences
+        skillCards.forEach(card => {
+            if (isElementInViewport(card)) {
+                const progressBar = card.querySelector('.skill-progress');
+                const percentValue = card.querySelector('.skill-level-percent').textContent;
                 
-                if (sectionTop < windowHeight * 0.8) {
-                    const progressBars = section.querySelectorAll('.skill-progress');
-                    progressBars.forEach(bar => {
-                        const width = bar.style.width;
-                        bar.style.width = '0';
-                        setTimeout(() => {
-                            bar.style.width = width;
-                        }, 200);
-                    });
-                    
-                    // Supprimer la section de l'observation une fois animée
-                    skillSections.delete(section);
-                }
-            });
-        };
+                // Extraire le pourcentage
+                const percent = parseInt(percentValue);
+                
+                // Animer la barre de progression
+                setTimeout(() => {
+                    progressBar.style.width = percent + '%';
+                }, 200);
+                
+                // Ajouter une classe pour éviter de réanimer
+                card.classList.add('animated');
+            }
+        });
+    }
 
-        // Observer le défilement pour déclencher l'animation
-        window.addEventListener('scroll', animateSkills);
-        // Déclencher une fois au chargement
-        window.addEventListener('load', animateSkills);
+    // Déclencher l'animation au chargement initial
+    setTimeout(animateOnScroll, 500);
+
+    // Ajuster le menu mobile en cas de redimensionnement
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            mobileMenuOverlay.style.display = 'none';
+            mobileMenuOverlay.classList.remove('active');
+        }
+    });
+});
     </script>
 </body>
 </html>
